@@ -1,8 +1,0 @@
-oauth2Login() -> 사용자 OAuth2Login 
--> OAuth2LoginAuthenticationProvider의 authenticate() 내부에서 인가 코드를 전달 받아, AccessToken을 요청
--> Access Token을 OAuth2UserRequest에 담아 OAuth2UserService의 loadUser()를 호출
--> loadUser()는 OAuth2UserRequest 내부에 담긴 Access Token을 통해 사용자 정보를 받아옴
--> 받아온 사용자 정보는 OAuth2User를 구현한 DefaultOAuth2User 객체에 담겨 반환됩니다.
-=> OAuth2UserService의 상속 받고 loadUser()를 호출하여, 사용자 정보가 담긴 OAuth2User 객체를 반환 받아 로그인 처리
-
-redirect-uri: {baseUrl}/{action}/oauth2/code/{registrationId}
